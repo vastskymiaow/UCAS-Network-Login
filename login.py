@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import requests
 import execjs
+import time
+import configparser
 
 
 '''
@@ -45,11 +47,31 @@ to fill the new URL prepared for login in
 index = new_url.index('?')
 queryString = new_url[index+1:]
 new_url = "http://210.77.16.21/eportal/InterFace.do?method=login&" + queryString
+print('\n\n\n')
+print('用户名格式:e五个汉字\\学号')
+print('用户名格式参考：e真的有用吗\\202018013220000')
+
+try:
+    
+    print('***************读取配置文件*************\n')
 
 
-print("用户名格式参考：e真的有用吗\\202018013220000")
-username, password = input("请输入用户名和密码（以空格隔开）：").split()
+    conf = configparser.ConfigParser()
+    conf.read('conf.ini')
+    username = conf.get('Default', 'username')
+    password = conf.get('Default', 'password') 
+    print('************读取配置文件成功************\n')   
 
+except:
+    print('*********没有配置文件conf.ini！*********\n')
+    username, password = input("请输入用户名和密码（以空格隔开）：").split()
+    config = configparser.ConfigParser()
+    config['Default'] = {
+        'username' : username,
+        'password' : password
+    }
+    with open('conf.ini', 'w') as configfile:
+        config.write(configfile)
 
 '''
 to encrypt the password use the RSAKeyPair
@@ -118,6 +140,9 @@ success_url = 'http://210.77.16.21/eportal/success.jsp?' + new_url[userIndex+1:]
 success_test = s.get(success_url, headers=headers, allow_redirects=True, verify=False)
 
 if success_test.status_code == 200:
-    print('登录成功！请打开浏览器测试！')
+    print('*******登录成功！请打开浏览器测试！*******\n')
 else:
-    print('登陆失败！重新运行本程序')
+    print('*******登陆失败！重新运行本程序**********\n')
+
+print('*******5s后自动关闭*******')
+time.sleep(5)
