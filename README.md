@@ -5,12 +5,12 @@ A python program that helps you log in UCAS network for free. 免费自动登录
 为了方便大家使用，我将程序打包成exe可执行程序（windows系统）和exec（mac、ubuntu等类unix系统。<br/>
 请对应下载可执行文件，运行即可。<br/>
 对应表如下：
-| 系统 | 文件 |
-|:---:|:---:|
-|Windows | login.exe|
-|Mac OS | login|
-|Ubuntu | login|
 
+| 系统 | 文件 |
+| :------: | :------: |
+| Windows | login.exe |
+| Mac OS | login |
+| Ubuntu | login |
 ## 源码安装 Install from code
 环境需求：python3.5 or python3.6<br/>
 依赖`request`和`execjs`<br/>
