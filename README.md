@@ -3,6 +3,10 @@ A python program that helps you log in UCAS network for free. 免费自动登录
 声明：本软件不会收集你的任何信息，即使保存密码也都是保存在本地。<br/>
 软件编写思想是模拟浏览器填充用户名和加密后的密码，发送认证消息。
 ## 使用说明
+提供三种方式进行登陆
+
+### 1 直接运行可执行文件
+
 旧版程序截图：
 ![avatar](screenshot2.png)
 
@@ -29,7 +33,7 @@ username = e真的有用吗\201818013220000
 password = 000000
 ```
 如果不小心输入了错误的用户名或密码，直接修改`conf.ini`中的用户名及密码。或者直接删除`conf.ini`，重新运行程序。
-## 源码安装 Install from code
+### 2 源码安装 Install from code
 环境需求：python3.5 or python3.6<br/>
 依赖`request`和`execjs`<br/>
 安装步骤，在系统终端里执行。windows为cmd，Mac和Ubuntu为bash终端。
@@ -37,14 +41,14 @@ password = 000000
 pip install requests
 pip install pyexecjs
 ```
-## 执行 Exec
+### 执行 Exec
 在系统终端里执行。windows为cmd，Mac和Ubuntu为bash终端。
 ```bash
 python login.py
 ```
 输入用户名和密码，要以空格隔开。
 
-## 手动登陆法
+## 3 手动登陆法
 * 用谷歌Chrome浏览器或者Microsoft Edge打开`210.77.16.21`网址
 * 进入开发者模式，然后找到`210.77.16.21:8080`文件夹下`eportal/interface/index_files`
 * 找到`pc`目录下，`login_bch.js`文件
