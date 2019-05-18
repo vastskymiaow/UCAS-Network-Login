@@ -37,6 +37,7 @@ if(a.indexOf('\\')>-1){
 			return false;
   	}
 ```
+![avatar](screen.png)
 * 保存（windows下ctrl+s），并在浏览器内输入用户名和密码。记住保存更改后，不能刷新登陆界面。
 
 参考了MAC版登录器Uon，感谢Chriskuei
