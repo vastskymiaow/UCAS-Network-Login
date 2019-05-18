@@ -26,7 +26,18 @@ python login.py
 ```
 输入用户名和密码，要以空格隔开。
 
-## 
+## 手动登陆法
+* 用谷歌Chrome浏览器或者Microsoft Edge打开`210.77.16.21`网址
+* 进入开发者模式，然后找到`210.77.16.21:8080`文件夹下`eportal/interface/index_files`
+* 找到`pc`目录下，`login_bch.js`文件
+* 删除925至928行代码
+```
+if(a.indexOf('\\')>-1){
+  		showerror('用户名不能包含\\!',1);
+			return false;
+  	}
+```
+* 保存（windows下ctrl+s），并在浏览器内输入用户名和密码。记住保存更改后，不能刷新登陆界面。
 
 参考了MAC版登录器Uon，感谢Chriskuei
 https://github.com/Chriskuei/Uon-for-Mac <br/>
