@@ -6,13 +6,19 @@ A python program that helps you log in UCAS network for free. 免费自动登录
 请对应下载可执行文件，运行即可。<br/>
 对应表如下：
 
-| 系统 | 文件 |
-| :------: | :------: |
-| Windows | login.exe |
-| Mac OS | login |
-| Ubuntu | login |
+| 系统 | 文件 | 说明 |
+| :------: | :------: | :------: |
+| Windows | login.exe | 会自动保存密码 |
+| Windows | login_old.exe | 不会自动保存密码 |
+| Mac OS | login | 会自动保存密码 |
+| Mac OS | login_old | 不会自动保存密码 |
+| Ubuntu | login | 会自动保存密码 |
+| Ubuntu | login_old | 不会自动保存密码 |
+
+
 为了更加方便简洁，将密码保存在本地。初次使用需要输入用户名和密码，其会自动保存在相同目录下的`conf.ini`文件中。
 内容参考如下：
+
 ```editorconfig
 [Default]
 username = e真的有用吗\201818013220000
