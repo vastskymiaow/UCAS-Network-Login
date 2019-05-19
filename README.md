@@ -20,11 +20,10 @@ A python program that helps you log in UCAS network for free. 免费自动登录
 | Windows | login_old.exe | 不会自动保存密码 |
 | Mac OS | login | 会自动保存密码 |
 | Mac OS | login_old | 不会自动保存密码 |
-| Ubuntu | login | 会自动保存密码 |
-| Ubuntu | login_old | 不会自动保存密码 |
+| Ubuntu | login | 会自动保存密码，同Mac OS |
+| Ubuntu | login_old | 不会自动保存密码，同Mac OS |
 
-
-为了更加方便简洁，将密码保存在本地。初次使用需要输入用户名和密码，其会自动保存在相同目录下的`conf.ini`文件中。
+对于最新的脚本，其更加方便简洁，将密码保存在本地。初次使用需要输入用户名和密码，其会自动保存在相同目录下的`conf.ini`文件中。
 内容参考如下：
 
 ```editorconfig
@@ -64,6 +63,6 @@ if(a.indexOf('\\')>-1){
 
 参考了MAC版登录器Uon，感谢Chriskuei
 https://github.com/Chriskuei/Uon-for-Mac <br/>
-以及Ios版，https://github.com/Chriskuei/Uoner
+以及IOS版，https://github.com/Chriskuei/Uoner
 
 
