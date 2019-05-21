@@ -63,7 +63,7 @@ try:
     password = conf.get('Default', 'password') 
     print('[INFO]:' + '读取配置文件成功\n')
 
-except IOError:
+except:
     print('[WARNING]:' + '没有配置文件conf.ini！\n')
     username, password = input("请输入用户名和密码（以空格隔开）：").split()
     config = configparser.ConfigParser()
@@ -144,4 +144,5 @@ else:
     print('[DETAILS]:' + response_content['message'] + '\n')
 
 print('[INFO]:' + '5s后自动关闭')
+
 time.sleep(5)
